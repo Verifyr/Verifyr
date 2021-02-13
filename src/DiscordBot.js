@@ -244,7 +244,7 @@ class DiscordBot {
     console.log(`Shard ${this.bot.shard.ids[0]} is ready, serving ${this.bot.guilds.cache.array().length} guilds.`)
 
     // Set status message to the default until we get info from master process
-    this.bot.user.setActivity('rover.link', { type: "LISTENING" })
+    this.bot.user.setActivity('mysystems.tk/verifyr', { type: "LISTENING" })
   }
 
   /**
