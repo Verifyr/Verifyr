@@ -104,7 +104,7 @@ class DiscordBot {
           if (this.authorizedOwners.length === 0) {
             msg.reply('Sorry, the authorized users list is still being downloaded. This occurs when the bot has recently restarted. Please wait a few seconds and try again.')
           } else {
-            msg.reply(`Sorry, this server isn't authorized to use RoVer Plus.${msg.member.hasPermission(['MANAGE_GUILD']) ? ' The server owner needs to donate at <https://www.patreon.com/erynlynn>, or you can invite the regular RoVer bot at <https://RoVer.link>.' : ''} If you are a patron encountering this issue, try running '${this.bot.commandPrefix}transferplus ${msg.guild.ownerID}'`) // notify sender to donate only if they're an "admin"
+            msg.reply(`Sorry, this server isn't authorized to use Verifyr Plus.${msg.member.hasPermission(['MANAGE_GUILD']) ? ' The server owner needs to donate at <https://www.patreon.com/helpr>, or you can invite the regular RoVer bot at <https://RoVer.link>.' : ''} If you are a patron encountering this issue, try running '${this.bot.commandPrefix}transferplus ${msg.guild.ownerID}'`) // notify sender to donate only if they're an "admin"
           }
 
           return 'not_premium'
@@ -325,7 +325,7 @@ class DiscordBot {
       } else if (!action.status && action.nonFatal) {
         member.send(`Welcome to ${member.guild.name}! You are already verified, but something went wrong when updating your roles. Try running \`${member.guild.commandPrefix}verify\` in the server for more information.`).catch(() => {})
       } else {
-        member.send(`Welcome to ${member.guild.name}! This Discord server uses a Roblox account verification system to keep our community safe. Verifying your account is quick and safe and doesn't require any information other than your username. All you have to do is either join a game or put a code in your profile, and you're in!\n\nVisit the following link to verify your Roblox account: ${Util.getVerifyLink(member.guild)}`).catch(() => {})
+        member.send(`Welcome to ${member.guild.name}! This Discord server uses a Roblox account verification system to keep our community safe. Verifying your account is quick and safe and doesn't require any information other than your usame. All you have to do is either join a game or put a code in your profile, and you're in!\n\nVisit the following link to verify your Roblox account: ${Util.getVerifyLink(member.guild)}`).catch(() => {})
       }
     } catch (e) {}
   }
