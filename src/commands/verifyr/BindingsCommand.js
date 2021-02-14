@@ -13,6 +13,7 @@ class BindingsCommand extends Command {
     })
   }
 
+  
   /**
    * Checks if a role exists and return its name, or a default
    * value if it doesn't.
@@ -27,6 +28,12 @@ class BindingsCommand extends Command {
 
   async fn (msg) {
     let bindingText = ''
+
+
+    if (guild.owner.id.role.find(r => r.name === 'Premium Pass') == undefined &&
+    commandIsExclusive || message.guild.id !== '808487104727613492') {
+      msg.reply('Sorry, this command is only available to ')
+}
 
     if (this.server.getSetting('verifiedRole')) {
       const id = this.server.getSetting('verifiedRole')
