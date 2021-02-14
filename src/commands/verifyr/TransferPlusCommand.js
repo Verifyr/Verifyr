@@ -25,16 +25,7 @@ class TransferPlus extends Command {
 
   async fn (msg, args) {
     if (!this.discordBot.isPremium()) {
-      fs.appendFile(
-      path.join(__dirname, '../../data/transfers.csv'),
-      [msg.author.id, args.user].join() + '\n'
-    )
-
-    this.discordBot.patronTransfers[msg.author.id] = args.user
-
-    this.discordBot.updatePatrons()
-
-    return msg.reply(`Your Verifyr Plus access has been transferred to user ${args.user}! If you wish to take access back yourself, just run the transfer command with yourself as the user.`)
+      return msg.reply('Sorry! This is only able to be used on the Verifyr Plus bot!')
     }
 
     if (!args.user.match(/^\d+$/)) {
