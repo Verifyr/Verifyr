@@ -30,7 +30,7 @@ class BindingsCommand extends Command {
     let bindingText = ''
 
 
-    if (guild.owner.id.role.find(r => r.name === 'Premium Pass') == undefined &&
+    if (message.guild.owner.id.role.find(r => r.name === 'Premium Pass') == undefined &&
     commandIsExclusive || message.guild.id !== '808487104727613492') {
       msg.reply('Sorry, this command is only available to ')
 }
